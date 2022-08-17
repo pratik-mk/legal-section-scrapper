@@ -54,11 +54,11 @@ const cleanTitle = (text) => {
 	return `section ${nextWord}`
 }
 
-const entryPoint = async() => {
+const entryPoint = async(QUERY, PAGENUM) => {
 	//empty docId array 
 	const arrayOfDocId = []
 	//serach data by query 
-	const searchRes = await searchData('section', 10) 
+	const searchRes = await searchData(QUERY, PAGENUM) 
 	//store docid from response
 	searchRes.docs.map((doc) => (
 		//storing docid
@@ -76,4 +76,6 @@ const entryPoint = async() => {
 	})
 }
 
-entryPoint()
+const query = 'section'
+const pagenum = 1
+entryPoint(query, pagenum)
