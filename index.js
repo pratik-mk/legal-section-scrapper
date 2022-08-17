@@ -58,7 +58,7 @@ const entryPoint = async() => {
 	//empty docId array 
 	const arrayOfDocId = []
 	//serach data by query 
-	const searchRes = await searchData('section', 1) 
+	const searchRes = await searchData('section', 10) 
 	//store docid from response
 	searchRes.docs.map((doc) => (
 		//storing docid
